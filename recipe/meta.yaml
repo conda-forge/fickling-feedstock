@@ -24,6 +24,8 @@ requirements:
   run:
     - python >={{ python_min }}
     - stdlib-list ~=0.11.1
+    # not listed in dependencies but needed to past import
+    - typing_extensions
 
 test:
   imports:
