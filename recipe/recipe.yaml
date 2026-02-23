@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fickling
-  version: "0.1.7"
+  version: "0.1.8"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fickling-${{ version }}.tar.gz
-  sha256: 03d11db2fbb86eb40bdc12a3c4e7cac1dbb16e1207893511d7df0d91ae000899
+  sha256: 25a0bc7acda76176a9087b405b05f7f5021f76079aa26c6fe3270855ec57d9bf
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -27,7 +27,6 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - stdlib-list ~=0.11.1
     # not listed in dependencies but needed to past import
     - typing_extensions
 
