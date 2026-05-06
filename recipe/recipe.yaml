@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fickling
-  version: "0.1.10"
+  version: "0.1.11"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fickling-${{ version }}.tar.gz
-  sha256: 8c8b76abd29936f1a5932e4087b8c8becb2d7ab1cf08549e63519ebcb2f71644
+  sha256: 3ca0dcc69967c53868b35787017d4d7d8943f096450431f7e3b3a9aadb02b0f5
 
 build:
   number: 0
@@ -35,7 +35,9 @@ tests:
       imports:
         - fickling
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
