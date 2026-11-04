@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fickling
-  version: "0.1.12"
+  version: "0.1.13"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fickling-${{ version }}.tar.gz
-  sha256: 83f6ccc948e21edb9ebd92795069536b47f481ce6add62598eac608b31576821
+  sha256: 9a6412409227acd0d8c9825b0bc3b0fcf6a5ccae564e527ff7f8e5fc9e92b533
 
 build:
   number: 0
