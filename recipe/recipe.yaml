@@ -28,7 +28,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     # not listed in dependencies but needed to past import
-    - typing_extensions
+    - typing_extensions >=4.6.0
 
 tests:
   - python:
